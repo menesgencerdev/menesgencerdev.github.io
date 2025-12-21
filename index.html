@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammet Enes GENÇER | Portfolyo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .skill-card { transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.05); }
+        .skill-card:hover { transform: translateY(-5px); border-color: #3b82f6; background: rgba(59, 130, 246, 0.05); }
+    </style>
+</head>
+<body class="bg-[#020617] text-slate-300">
+
+    <nav class="fixed w-full z-50 glass">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Enes.dev</span>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#hakkimda" class="hover:text-blue-400 transition">Hakkımda</a>
+                <a href="#yetenekler" class="hover:text-blue-400 transition">Yetenekler</a>
+                <a href="#projeler" class="hover:text-blue-400 transition">Projeler</a>
+                <a href="#iletisim" class="hover:text-blue-400 transition text-blue-400 border border-blue-400/30 px-4 py-1 rounded-full">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <div class="inline-block px-4 py-1.5 mb-6 text-sm font-medium tracking-wider text-blue-400 uppercase bg-blue-400/10 rounded-full">
+            Yazılım Geliştirici
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
+            Muhammet Enes <span class="text-blue-500">GENÇER</span>
+        </h1>
+        <p class="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed">
+            İnönü Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Mobil uygulamalar ve web teknolojileri üzerine odaklanarak yenilikçi dijital çözümler üretiyorum.
+        </p>
+        <div class="mt-10 flex flex-col md:flex-row gap-4">
+            <a href="#projeler" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-xl font-semibold transition shadow-lg shadow-blue-500/25">Projelerimi İncele</a>
+            <a href="https://github.com" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-3 rounded-xl font-semibold transition">GitHub Profilim</a>
+        </div>
+    </section>
+
+    <section id="hakkimda" class="py-24 max-w-5xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-6">Hakkımda</h2>
+                <p class="text-slate-400 leading-relaxed mb-4">
+                    İnönü Üniversitesi'nde aldığım mühendislik eğitimiyle birlikte, yazılım dünyasında pratik çözümler geliştirmeye odaklanıyorum. Takım çalışmasına yatkın ve analitik düşünme yeteneğine sahip bir geliştirici olarak sürekli öğrenmeyi ilke ediniyorum.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="text-blue-500 mr-3 mt-1">▹</div>
+                        <p><span class="text-white font-medium">Eğitim:</span> İnönü Üniversitesi - Bilgisayar Mühendisliği (2022-Devam)</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="text-blue-500 mr-3 mt-1">▹</div>
+                        <p><span class="text-white font-medium">Yabancı Dil:</span> İngilizce (A2 - Temel Seviye)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-900/50 p-8 rounded-3xl border border-slate-800">
+                <h3 class="text-xl font-semibold text-white mb-4">Öne Çıkan Çalışma Alanları</h3>
+                <ul class="space-y-3 text-slate-400">
+                    <li class="flex justify-between"><span>Android Mobil Geliştirme</span> <span class="text-blue-400">Java & Kotlin</span></li>
+                    <li class="flex justify-between"><span>Web Tasarımı</span> <span class="text-blue-400">HTML5 & CSS</span></li>
+                    <li class="flex justify-between"><span>Veritabanı Yönetimi</span> <span class="text-blue-400">PostgreSQL</span></li>
+                    <li class="flex justify-between"><span>Gömülü Sistemler</span> <span class="text-blue-400">Arduino</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="yetenekler" class="py-24 bg-slate-900/30">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-12 text-center">Teknik Yetenekler</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="skill-card p-6 rounded-2xl bg-slate-900/50 text-center">
+                    <div class="text-blue-400 font-bold mb-2">Mobil</div>
+                    <p class="text-sm">Android Studio, Firebase</p>
+                </div>
+                <div class="skill-card p-6 rounded-2xl bg-slate-900/50 text-center">
+                    <div class="text-indigo-400 font-bold mb-2">Diller</div>
+                    <p class="text-sm">Kotlin, Java, Python, C#</p>
+                </div>
+                <div class="skill-card p-6 rounded-2xl bg-slate-900/50 text-center">
+                    <div class="text-emerald-400 font-bold mb-2">Backend</div>
+                    <p class="text-sm">PostgreSQL, Firestore</p>
+                </div>
+                <div class="skill-card p-6 rounded-2xl bg-slate-900/50 text-center">
+                    <div class="text-orange-400 font-bold mb-2">Donanım</div>
+                    <p class="text-sm">Arduino, Çip Tasarımı</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projeler" class="py-24 max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">Çalışmalarım</h2>
+        <p class="text-slate-400 mb-12 max-w-xl mx-auto">Geliştirdiğim projeleri ve kod örneklerini GitHub üzerinden detaylıca inceleyebilirsiniz.</p>
+        
+        <div class="inline-block group">
+            <a href="https://github.com" target="_blank" class="flex items-center space-x-3 bg-white/5 hover:bg-white/10 border border-white/10 px-8 py-4 rounded-2xl transition">
+                <span class="text-xl font-semibold text-white">GitHub Projelerine Git</span>
+                <span class="text-blue-400 group-hover:translate-x-2 transition-transform">→</span>
+            </a>
+        </div>
+    </section>
+
+    <footer id="iletisim" class="py-24 border-t border-slate-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">İletişime Geçin</h2>
+            <p class="text-slate-400 mb-10 text-lg">Yeni projeler ve iş birliği teklifleri için ulaşabilirsiniz.</p>
+            <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                <div class="p-6 rounded-2xl bg-blue-500/5 border border-blue-500/10 text-blue-400">
+                    <div class="text-xs uppercase tracking-widest mb-1 opacity-60">E-Posta</div>
+                    <a href="mailto:enesgencer0@gmail.com" class="font-semibold">enesgencer0@gmail.com</a>
+                </div>
+                <div class="p-6 rounded-2xl bg-indigo-500/5 border border-indigo-500/10 text-indigo-400">
+                    <div class="text-xs uppercase tracking-widest mb-1 opacity-60">Telefon</div>
+                    <span class="font-semibold">+90 535 969 11 50</span>
+                </div>
+            </div>
+            <div class="mt-12 text-sm text-slate-600 italic">
+                &copy; 2025 Muhammet Enes GENÇER. Tüm hakları saklıdır.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
