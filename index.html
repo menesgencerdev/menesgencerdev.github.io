@@ -8,20 +8,21 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .skill-card { transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.05); }
-        .skill-card:hover { transform: translateY(-5px); border-color: #3b82f6; background: rgba(59, 130, 246, 0.05); }
+        .glass { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .card-hover { transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.05); }
+        .card-hover:hover { transform: translateY(-5px); border-color: #3b82f6; background: rgba(59, 130, 246, 0.05); }
+        .ss-card { border: 1px solid rgba(255,255,255,0.1); background: #0f172a; overflow: hidden; border-radius: 1rem; transition: transform 0.3s ease; }
+        .ss-card:hover { transform: scale(1.02); border-color: #3b82f6; }
     </style>
 </head>
 <body class="bg-[#020617] text-slate-300">
 
     <nav class="fixed w-full z-50 glass">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Enes.dev</span>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <span class="text-xl font-bold text-blue-400"></span> <div class="hidden md:flex space-x-8 text-sm font-medium">
                 <a href="#hakkimda" class="hover:text-blue-400 transition">Hakkımda</a>
                 <a href="#yetenekler" class="hover:text-blue-400 transition">Yetenekler</a>
-                <a href="#projeler" class="hover:text-blue-400 transition">Projeler</a>
+                <a href="#bitirme" class="hover:text-blue-400 transition">Bitirme Projesi</a>
                 <a href="#iletisim" class="hover:text-blue-400 transition text-blue-400 border border-blue-400/30 px-4 py-1 rounded-full">İletişim</a>
             </div>
         </div>
@@ -35,97 +36,161 @@
             Muhammet Enes <span class="text-blue-500">GENÇER</span>
         </h1>
         <p class="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed">
-            İnönü Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Mobil uygulamalar ve web teknolojileri üzerine odaklanarak yenilikçi dijital çözümler üretiyorum.
+            İnönü Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Gemini AI destekli sistemler ve modern web teknolojileri geliştiriyorum.
         </p>
         <div class="mt-10 flex flex-col md:flex-row gap-4">
-            <a href="#projeler" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-xl font-semibold transition shadow-lg shadow-blue-500/25">Projelerimi İncele</a>
-            <a href="https://github.com" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-3 rounded-xl font-semibold transition">GitHub Profilim</a>
+            <a href="#bitirme" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-xl font-semibold transition shadow-lg shadow-blue-500/25 italic">Bitirme Projesini Gör</a>
+            <a href="https://github.com/menesgencerdev" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-3 rounded-xl font-semibold transition">GitHub Profilim</a>
         </div>
     </section>
 
-    <section id="hakkimda" class="py-24 max-w-5xl mx-auto px-6">
+    <section id="hakkimda" class="py-24 max-w-5xl mx-auto px-6 border-t border-slate-900">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 class="text-3xl font-bold text-white mb-6">Hakkımda</h2>
-                <p class="text-slate-400 leading-relaxed mb-4">
-                    İnönü Üniversitesi'nde aldığım mühendislik eğitimiyle birlikte, yazılım dünyasında pratik çözümler geliştirmeye odaklanıyorum. Takım çalışmasına yatkın ve analitik düşünme yeteneğine sahip bir geliştirici olarak sürekli öğrenmeyi ilke ediniyorum.
+                <p class="text-slate-400 leading-relaxed mb-6 text-lg">
+                    İnönü Üniversitesi Bilgisayar Mühendisliği bölümünde lisans eğitimime devam ediyorum. Mobil ve web teknolojileri alanında deneyimli, analitik problem çözme becerilerine sahip bir yazılım geliştiricisiyim.
                 </p>
                 <div class="space-y-4">
-                    <div class="flex items-start">
-                        <div class="text-blue-500 mr-3 mt-1">▹</div>
-                        <p><span class="text-white font-medium">Eğitim:</span> İnönü Üniversitesi - Bilgisayar Mühendisliği (2022-Devam)</p>
+                    <div class="flex items-center text-slate-200">
+                        <span class="text-blue-500 mr-3 text-xl">▹</span>
+                        Eğitim: İnönü Üniversitesi (2022 - Devam)
                     </div>
-                    <div class="flex items-start">
-                        <div class="text-blue-500 mr-3 mt-1">▹</div>
-                        <p><span class="text-white font-medium">Yabancı Dil:</span> İngilizce (A2 - Temel Seviye)</p>
+                    <div class="flex items-center text-slate-200">
+                        <span class="text-blue-500 mr-3 text-xl">▹</span>
+                        Yabancı Dil: İngilizce (A2 - Temel Seviye)
                     </div>
                 </div>
             </div>
             <div class="bg-slate-900/50 p-8 rounded-3xl border border-slate-800">
-                <h3 class="text-xl font-semibold text-white mb-4">Öne Çıkan Çalışma Alanları</h3>
-                <ul class="space-y-3 text-slate-400">
-                    <li class="flex justify-between"><span>Android Mobil Geliştirme</span> <span class="text-blue-400">Java & Kotlin</span></li>
-                    <li class="flex justify-between"><span>Web Tasarımı</span> <span class="text-blue-400">HTML5 & CSS</span></li>
-                    <li class="flex justify-between"><span>Veritabanı Yönetimi</span> <span class="text-blue-400">PostgreSQL</span></li>
-                    <li class="flex justify-between"><span>Gömülü Sistemler</span> <span class="text-blue-400">Arduino</span></li>
-                </ul>
+                <h3 class="text-xl font-semibold text-white mb-4 italic">Profesyonel Özet</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Öğrenmeye ve kendimi geliştirmeye açık, takım çalışmasına yatkın bir mühendis adayıyım. Java ve Kotlin ile Android uygulamaları, modern web teknolojileri ile kullanıcı odaklı projeler üretiyorum.
+                </p>
             </div>
         </div>
     </section>
 
-    <section id="yetenekler" class="py-24 bg-slate-900/30">
+    <section id="yetenekler" class="py-24 bg-slate-900/20 text-center border-y border-slate-900">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-white mb-12 text-center">Teknik Yetenekler</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="skill-card p-6 rounded-2xl bg-slate-900/50 text-center">
-                    <div class="text-blue-400 font-bold mb-2">Mobil</div>
-                    <p class="text-sm">Android Studio, Firebase</p>
+            <h2 class="text-3xl font-bold text-white mb-12">Teknik Yetenekler</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="card-hover p-6 rounded-2xl bg-slate-900/50">
+                    <div class="text-blue-400 font-bold mb-3">Mobil</div>
+                    <ul class="text-xs space-y-2 text-slate-400">
+                        <li>Android Studio</li>
+                        <li>Java & Kotlin</li>
+                        <li>Firebase</li>
+                    </ul>
                 </div>
-                <div class="skill-card p-6 rounded-2xl bg-slate-900/50 text-center">
-                    <div class="text-indigo-400 font-bold mb-2">Diller</div>
-                    <p class="text-sm">Kotlin, Java, Python, C#</p>
+                <div class="card-hover p-6 rounded-2xl bg-slate-900/50">
+                    <div class="text-indigo-400 font-bold mb-3">Web</div>
+                    <ul class="text-xs space-y-2 text-slate-400">
+                        <li>HTML5 & CSS</li>
+                        <li>JavaScript</li>
+                        <li>Modern UI Tasarımı</li>
+                    </ul>
                 </div>
-                <div class="skill-card p-6 rounded-2xl bg-slate-900/50 text-center">
-                    <div class="text-emerald-400 font-bold mb-2">Backend</div>
-                    <p class="text-sm">PostgreSQL, Firestore</p>
+                <div class="card-hover p-6 rounded-2xl bg-slate-900/50">
+                    <div class="text-emerald-400 font-bold mb-3">Backend & Veri</div>
+                    <ul class="text-xs space-y-2 text-slate-400">
+                        <li>Python & C#</li>
+                        <li>PostgreSQL</li>
+                        <li>Firestore</li>
+                    </ul>
                 </div>
-                <div class="skill-card p-6 rounded-2xl bg-slate-900/50 text-center">
-                    <div class="text-orange-400 font-bold mb-2">Donanım</div>
-                    <p class="text-sm">Arduino, Çip Tasarımı</p>
+                <div class="card-hover p-6 rounded-2xl bg-slate-900/50">
+                    <div class="text-orange-400 font-bold mb-3">Araçlar & Diğer</div>
+                    <ul class="text-xs space-y-2 text-slate-400">
+                        <li>Git & GitHub</li>
+                        <li>Arduino Projeleri</li>
+                        <li>Çip Tasarımı (İlgi)</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projeler" class="py-24 max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold text-white mb-4">Çalışmalarım</h2>
-        <p class="text-slate-400 mb-12 max-w-xl mx-auto">Geliştirdiğim projeleri ve kod örneklerini GitHub üzerinden detaylıca inceleyebilirsiniz.</p>
-        
-        <div class="inline-block group">
-            <a href="https://github.com" target="_blank" class="flex items-center space-x-3 bg-white/5 hover:bg-white/10 border border-white/10 px-8 py-4 rounded-2xl transition">
-                <span class="text-xl font-semibold text-white">GitHub Projelerine Git</span>
-                <span class="text-blue-400 group-hover:translate-x-2 transition-transform">→</span>
-            </a>
+    <section id="bitirme" class="py-24 bg-blue-600/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Akıllı Belediyecilik Platformu</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-slate-400 max-w-3xl mx-auto leading-relaxed text-lg">
+                    Vatandaş şikayetlerini <b>Gemini AI</b> kullanarak analiz eden ve otomatik sınıflandıran, belediye yetkilileri için veri odaklı yönetim imkanı sunan bir sistemdir.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16 max-w-3xl mx-auto">
+                <div class="p-4 rounded-xl bg-slate-900 border border-blue-500/20 text-center">
+                    <span class="text-blue-400 font-mono text-sm font-bold">Gemini AI (NLP)</span>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900 border border-blue-500/20 text-center">
+                    <span class="text-blue-400 font-mono text-sm font-bold">FastAPI</span>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900 border border-blue-500/20 text-center md:col-span-1 col-span-2">
+                    <span class="text-blue-400 font-mono text-sm font-bold">PostgreSQL</span>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <h3 class="text-2xl font-bold text-white flex items-center mb-8">
+                    <span class="mr-4">📸</span> Proje Arayüzleri
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="ss-card">
+                        <img src="geneladmin.png" alt="Süper Admin Paneli" class="w-full h-auto">
+                        <div class="p-4 bg-slate-950/80 text-center font-medium">Süper Admin Takip Paneli</div>
+                    </div>
+                    <div class="ss-card">
+                        <img src="istanbulsikayet.png" alt="Vatandaş Listesi" class="w-full h-auto">
+                        <div class="p-4 bg-slate-950/80 text-center font-medium">Vatandaş Şikayet Takip Listesi</div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="ss-card">
+                        <img src="sikayet.png" alt="Şikayet Formu" class="w-full h-auto">
+                        <div class="p-3 text-center text-xs text-slate-500">Şikayet Giriş Ekranı</div>
+                    </div>
+                    <div class="ss-card">
+                        <img src="istanbulsikayett.png" alt="AI Yanıt" class="w-full h-auto">
+                        <div class="p-3 text-center text-xs text-slate-500">Gemini AI Analizi</div>
+                    </div>
+                    <div class="ss-card">
+                        <img src="istanbuladmin.png" alt="İl Admin" class="w-full h-auto">
+                        <div class="p-3 text-center text-xs text-slate-500">Belediye Yetkili Paneli</div>
+                    </div>
+                </div>
+
+                <div class="ss-card max-w-4xl mx-auto mt-12 border-blue-500/40 shadow-2xl shadow-blue-900/20">
+                    <img src="harita.png" alt="Şikayet Haritası" class="w-full h-auto">
+                    <div class="p-6 bg-slate-950/90 text-center">
+                        <h4 class="text-blue-400 font-bold text-xl mb-1">Türkiye Geneli Şikayet Analiz Haritası</h4>
+                        <p class="text-xs text-slate-500">İl bazlı yoğunluk takibi ve veri görselleştirme modülü.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer id="iletisim" class="py-24 border-t border-slate-900">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-white mb-6">İletişime Geçin</h2>
-            <p class="text-slate-400 mb-10 text-lg">Yeni projeler ve iş birliği teklifleri için ulaşabilirsiniz.</p>
+            <h2 class="text-3xl font-bold text-white mb-10">İletişime Geçin</h2>
             <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-                <div class="p-6 rounded-2xl bg-blue-500/5 border border-blue-500/10 text-blue-400">
-                    <div class="text-xs uppercase tracking-widest mb-1 opacity-60">E-Posta</div>
-                    <a href="mailto:enesgencer0@gmail.com" class="font-semibold">enesgencer0@gmail.com</a>
+                <div class="p-8 rounded-3xl bg-blue-500/5 border border-blue-500/10 transition hover:bg-blue-500/10 text-blue-400">
+                    <div class="text-xs uppercase tracking-widest mb-2 opacity-60 font-bold">E-Posta</div>
+                    <a href="mailto:enesgencer0@gmail.com" class="text-xl font-semibold">enesgencer0@gmail.com</a>
                 </div>
-                <div class="p-6 rounded-2xl bg-indigo-500/5 border border-indigo-500/10 text-indigo-400">
-                    <div class="text-xs uppercase tracking-widest mb-1 opacity-60">Telefon</div>
-                    <span class="font-semibold">+90 535 969 11 50</span>
+                <div class="p-8 rounded-3xl bg-indigo-500/5 border border-indigo-500/10 transition hover:bg-indigo-500/10 text-indigo-400">
+                    <div class="text-xs uppercase tracking-widest mb-2 opacity-60 font-bold">Telefon</div>
+                    <a href="tel:+905359691150" class="text-xl font-semibold">+90 535 969 11 50</a>
                 </div>
             </div>
-            <div class="mt-12 text-sm text-slate-600 italic">
-                &copy; 2025 Muhammet Enes GENÇER. Tüm hakları saklıdır.
-            </div>
+            <p class="mt-16 text-sm text-slate-600 italic">
+                &copy; 2025 Muhammet Enes GENÇER | İnönü Üniversitesi Bilgisayar Mühendisliği
+            </p>
         </div>
     </footer>
 
