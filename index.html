@@ -19,7 +19,8 @@
 
     <nav class="fixed w-full z-50 glass">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold text-blue-400"></span> <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <span class="text-xl font-bold text-blue-400"></span> 
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
                 <a href="#hakkimda" class="hover:text-blue-400 transition">Hakkımda</a>
                 <a href="#yetenekler" class="hover:text-blue-400 transition">Yetenekler</a>
                 <a href="#bitirme" class="hover:text-blue-400 transition">Bitirme Projesi</a>
@@ -51,7 +52,7 @@
                 <p class="text-slate-400 leading-relaxed mb-6 text-lg">
                     İnönü Üniversitesi Bilgisayar Mühendisliği bölümünde lisans eğitimime devam ediyorum. Mobil ve web teknolojileri alanında deneyimli, analitik problem çözme becerilerine sahip bir yazılım geliştiricisiyim.
                 </p>
-                <div class="space-y-4">
+                <div class="space-y-4 font-medium">
                     <div class="flex items-center text-slate-200">
                         <span class="text-blue-500 mr-3 text-xl">▹</span>
                         Eğitim: İnönü Üniversitesi (2022 - Devam)
@@ -63,7 +64,7 @@
                 </div>
             </div>
             <div class="bg-slate-900/50 p-8 rounded-3xl border border-slate-800">
-                <h3 class="text-xl font-semibold text-white mb-4 italic">Profesyonel Özet</h3>
+                <h3 class="text-xl font-semibold text-white mb-4 italic">Kısa Özet</h3>
                 <p class="text-sm text-slate-400 leading-relaxed">
                     Öğrenmeye ve kendimi geliştirmeye açık, takım çalışmasına yatkın bir mühendis adayıyım. Java ve Kotlin ile Android uygulamaları, modern web teknolojileri ile kullanıcı odaklı projeler üretiyorum.
                 </p>
@@ -74,9 +75,9 @@
     <section id="yetenekler" class="py-24 bg-slate-900/20 text-center border-y border-slate-900">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-white mb-12">Teknik Yetenekler</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
                 <div class="card-hover p-6 rounded-2xl bg-slate-900/50">
-                    <div class="text-blue-400 font-bold mb-3">Mobil</div>
+                    <div class="text-blue-400 font-bold mb-3 border-b border-blue-400/20 pb-1">Mobil</div>
                     <ul class="text-xs space-y-2 text-slate-400">
                         <li>Android Studio</li>
                         <li>Java & Kotlin</li>
@@ -84,23 +85,23 @@
                     </ul>
                 </div>
                 <div class="card-hover p-6 rounded-2xl bg-slate-900/50">
-                    <div class="text-indigo-400 font-bold mb-3">Web</div>
+                    <div class="text-indigo-400 font-bold mb-3 border-b border-indigo-400/20 pb-1">Web</div>
                     <ul class="text-xs space-y-2 text-slate-400">
                         <li>HTML5 & CSS</li>
                         <li>JavaScript</li>
-                        <li>Modern UI Tasarımı</li>
+                        <li>React.js / Vue.js</li>
                     </ul>
                 </div>
                 <div class="card-hover p-6 rounded-2xl bg-slate-900/50">
-                    <div class="text-emerald-400 font-bold mb-3">Backend & Veri</div>
+                    <div class="text-emerald-400 font-bold mb-3 border-b border-emerald-400/20 pb-1">Backend & Veri</div>
                     <ul class="text-xs space-y-2 text-slate-400">
-                        <li>Python & C#</li>
+                        <li>Python (FastAPI / Django)</li>
                         <li>PostgreSQL</li>
-                        <li>Firestore</li>
+                        <li>C#</li>
                     </ul>
                 </div>
                 <div class="card-hover p-6 rounded-2xl bg-slate-900/50">
-                    <div class="text-orange-400 font-bold mb-3">Araçlar & Diğer</div>
+                    <div class="text-orange-400 font-bold mb-3 border-b border-orange-400/20 pb-1">Araçlar & Diğer</div>
                     <ul class="text-xs space-y-2 text-slate-400">
                         <li>Git & GitHub</li>
                         <li>Arduino Projeleri</li>
@@ -116,8 +117,8 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-white mb-4">Akıllı Belediyecilik Platformu</h2>
                 <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
-                <p class="text-slate-400 max-w-3xl mx-auto leading-relaxed text-lg">
-                    Vatandaş şikayetlerini <b>Gemini AI</b> kullanarak analiz eden ve otomatik sınıflandıran, belediye yetkilileri için veri odaklı yönetim imkanı sunan bir sistemdir.
+                <p class="text-slate-400 max-w-4xl mx-auto leading-relaxed text-lg">
+                    Gemini AI destekli bu platform, vatandaşların yerel yönetimlere ilettiği şikayetleri Doğal Dil İşleme (NLP) teknikleriyle saniyeler içinde analiz ederek doğru birimlere yönlendirir. FastAPI ve PostgreSQL mimarisi üzerine kurulu sistem; şikayetleri otomatik kategorize etme, akıllı çözüm önerileri sunma ve belediye yetkililerine veri odaklı analiz imkanı sağlama özellikleriyle vatandaş-yerel yönetim iletişimini dijital dönüşüm vizyonuyla güçlendirmeyi hedefler.
                 </p>
             </div>
 
@@ -141,34 +142,34 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="ss-card">
                         <img src="geneladmin.png" alt="Süper Admin Paneli" class="w-full h-auto">
-                        <div class="p-4 bg-slate-950/80 text-center font-medium">Süper Admin Takip Paneli</div>
+                        <div class="p-4 bg-slate-950/80 text-center font-medium">Tüm Şikayetler (Süper Admin Paneli)</div>
                     </div>
                     <div class="ss-card">
                         <img src="istanbulsikayet.png" alt="Vatandaş Listesi" class="w-full h-auto">
-                        <div class="p-4 bg-slate-950/80 text-center font-medium">Vatandaş Şikayet Takip Listesi</div>
+                        <div class="p-4 bg-slate-950/80 text-center font-medium">Vatandaş Şikayet Takip Ekranı</div>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="ss-card">
                         <img src="sikayet.png" alt="Şikayet Formu" class="w-full h-auto">
-                        <div class="p-3 text-center text-xs text-slate-500">Şikayet Giriş Ekranı</div>
+                        <div class="p-3 text-center text-xs text-slate-500">Yeni Şikayet Oluşturma Formu</div>
                     </div>
                     <div class="ss-card">
                         <img src="istanbulsikayett.png" alt="AI Yanıt" class="w-full h-auto">
-                        <div class="p-3 text-center text-xs text-slate-500">Gemini AI Analizi</div>
+                        <div class="p-3 text-center text-xs text-slate-500">Gemini AI Destekli Otomatik Yanıt</div>
                     </div>
                     <div class="ss-card">
                         <img src="istanbuladmin.png" alt="İl Admin" class="w-full h-auto">
-                        <div class="p-3 text-center text-xs text-slate-500">Belediye Yetkili Paneli</div>
+                        <div class="p-3 text-center text-xs text-slate-500">Şehir Bazlı Belediye Yönetim Paneli</div>
                     </div>
                 </div>
 
-                <div class="ss-card max-w-4xl mx-auto mt-12 border-blue-500/40 shadow-2xl shadow-blue-900/20">
+                <div class="ss-card max-w-5xl mx-auto mt-12 border-blue-500/40 shadow-2xl shadow-blue-900/20">
                     <img src="harita.png" alt="Şikayet Haritası" class="w-full h-auto">
                     <div class="p-6 bg-slate-950/90 text-center">
-                        <h4 class="text-blue-400 font-bold text-xl mb-1">Türkiye Geneli Şikayet Analiz Haritası</h4>
-                        <p class="text-xs text-slate-500">İl bazlı yoğunluk takibi ve veri görselleştirme modülü.</p>
+                        <h4 class="text-blue-400 font-bold text-xl mb-2">Türkiye Geneli Şikayet Analiz Haritası</h4>
+                        <p class="text-xs text-slate-500">Aktif şikayetlerin il bazlı yoğunluk takibi ve gerçek zamanlı veri görselleştirmesi.</p>
                     </div>
                 </div>
             </div>
