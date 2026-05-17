@@ -6,71 +6,130 @@
     <title>Muhammet Enes GENÇER | Portfolyo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
         body { font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .card-hover { transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.05); }
-        .card-hover:hover { transform: translateY(-5px); border-color: #3b82f6; background: rgba(59, 130, 246, 0.05); }
-        .ss-card { border: 1px solid rgba(255,255,255,0.1); background: #0f172a; overflow: hidden; border-radius: 1rem; transition: transform 0.3s ease; }
-        .ss-card:hover { transform: scale(1.01); border-color: #3b82f6; }
+        .glass {
+            background: rgba(15, 23, 42, 0.86);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .card-hover {
+            transition: all 0.28s ease;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            border-color: rgba(59, 130, 246, 0.85);
+            background: rgba(59, 130, 246, 0.06);
+        }
+        .ss-card {
+            border: 1px solid rgba(255,255,255,0.1);
+            background: #0f172a;
+            overflow: hidden;
+            border-radius: 1rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .ss-card:hover {
+            transform: scale(1.01);
+            border-color: rgba(59, 130, 246, 0.8);
+        }
+        .soft-grid {
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.12), transparent 28%),
+                radial-gradient(circle at 80% 10%, rgba(16, 185, 129, 0.08), transparent 24%),
+                radial-gradient(circle at 50% 90%, rgba(99, 102, 241, 0.10), transparent 30%);
+        }
+        .badge {
+            border: 1px solid rgba(59, 130, 246, 0.24);
+            background: rgba(59, 130, 246, 0.09);
+        }
     </style>
 </head>
-<body class="bg-[#020617] text-slate-300">
+<body class="bg-[#020617] text-slate-300 soft-grid">
 
     <nav class="fixed w-full z-50 glass">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold text-blue-400"></span> 
-            <div class="hidden md:flex space-x-8 text-sm font-medium items-center">
+            <a href="#" class="text-sm md:text-lg font-extrabold text-white tracking-tight">
+                <span class="text-blue-400">M.E.</span> GENÇER
+            </a>
+
+            <div class="hidden md:flex space-x-7 text-sm font-medium items-center">
                 <a href="#hakkimda" class="hover:text-blue-400 transition">Hakkımda</a>
                 <a href="#yetenekler" class="hover:text-blue-400 transition">Yetenekler</a>
-                <a href="#bitirme" class="hover:text-blue-400 transition">Bitirme Projesi</a>
-                <a href="cv.pdf" target="_blank" class="flex items-center space-x-1 hover:text-blue-400 transition text-slate-300">
-                    <span>📄</span> <span>CV (PDF)</span>
-                </a>
+                <a href="#projeler" class="hover:text-blue-400 transition">Projeler</a>
+                <a href="#cv" class="hover:text-blue-400 transition">CV</a>
                 <a href="#iletisim" class="hover:text-blue-400 transition text-blue-400 border border-blue-400/30 px-4 py-1 rounded-full font-semibold">İletişim</a>
+            </div>
+
+            <div class="md:hidden flex items-center gap-3 text-sm">
+                <a href="#projeler" class="text-slate-300 font-semibold">Projeler</a>
+                <a href="#cv" class="text-blue-400 font-semibold">CV</a>
             </div>
         </div>
     </nav>
 
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-        <div class="inline-block px-4 py-1.5 mb-6 text-sm font-medium tracking-wider text-blue-400 uppercase bg-blue-400/10 rounded-full">
-            Yazılım Geliştirici
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24">
+        <div class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider text-blue-300 uppercase bg-blue-400/10 border border-blue-400/20 rounded-full">
+            Bilgisayar Mühendisliği Öğrencisi
         </div>
-        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
+
+        <h1 class="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight">
             Muhammet Enes <span class="text-blue-500">GENÇER</span>
         </h1>
-        <p class="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed">
-            İnönü Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Gemini AI destekli sistemler ve modern web teknolojileri geliştiriyorum.
+
+        <p class="text-lg md:text-xl text-slate-400 max-w-3xl leading-relaxed">
+            Web ve mobil tabanlı projeler geliştiriyor; bilgi işlem, sistem, ağ ve teknik operasyon süreçlerinde pratik deneyim kazanıyorum.
         </p>
+
         <div class="mt-10 flex flex-col md:flex-row gap-4">
-            <a href="#bitirme" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-xl font-semibold transition shadow-lg shadow-blue-500/25 italic">Bitirme Projesini Gör</a>
-            <a href="https://github.com/menesgencerdev" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-3 rounded-xl font-semibold transition">GitHub Profilim</a>
+            <a href="#projeler" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-xl font-semibold transition shadow-lg shadow-blue-500/25">
+                Projeleri Gör
+            </a>
+            <a href="#cv" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-3 rounded-xl font-semibold transition">
+                CV İndir
+            </a>
+            <a href="https://github.com/menesgencerdev" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-3 rounded-xl font-semibold transition">
+                GitHub
+            </a>
         </div>
     </section>
 
-    <section id="hakkimda" class="py-24 max-w-5xl mx-auto px-6 border-t border-slate-900">
+    <section id="hakkimda" class="py-24 max-w-6xl mx-auto px-6 border-t border-slate-900">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 class="text-3xl font-bold text-white mb-6">Hakkımda</h2>
                 <p class="text-slate-400 leading-relaxed mb-6 text-lg">
-                    İnönü Üniversitesi Bilgisayar Mühendisliği bölümünde lisans eğitimime devam ediyorum. Mobil ve web teknolojileri alanında deneyimli, analitik problem çözme becerilerine sahip bir yazılım geliştiricisiyim.
+                    İnönü Üniversitesi Bilgisayar Mühendisliği bölümünde lisans eğitimime devam ediyorum. Yazılım geliştirme tarafında web ve mobil projeler üretirken; ALKÜ Bilgi İşlem Birimi’nde sistem, ağ, donanım ve teknik destek süreçlerinde aktif deneyim kazandım.
                 </p>
+
                 <div class="space-y-4">
                     <div class="flex items-center text-slate-200">
                         <span class="text-blue-500 mr-3 text-xl">▹</span>
-                        Eğitim: İnönü Üniversitesi (2022 - Devam)
+                        Eğitim: İnönü Üniversitesi Bilgisayar Mühendisliği
                     </div>
                     <div class="flex items-center text-slate-200">
                         <span class="text-blue-500 mr-3 text-xl">▹</span>
-                        Yabancı Dil: İngilizce (A2 - Temel Seviye)
+                        Staj: ALKÜ Bilgi İşlem Birimi
+                    </div>
+                    <div class="flex items-center text-slate-200">
+                        <span class="text-blue-500 mr-3 text-xl">▹</span>
+                        İlgi Alanları: Web, mobil, sistem, ağ ve teknik operasyonlar
                     </div>
                 </div>
             </div>
+
             <div class="bg-slate-900/50 p-8 rounded-3xl border border-slate-800">
-                <h3 class="text-xl font-semibold text-white mb-4 italic">Profesyonel Özet</h3>
-                <p class="text-sm text-slate-400 leading-relaxed">
-                    Öğrenmeye ve kendimi geliştirmeye açık, takım çalışmasına yatkın bir mühendis adayıyım. Java ve Kotlin ile Android uygulamaları, modern web teknolojileri ile kullanıcı odaklı projeler üretiyorum.
+                <h3 class="text-xl font-semibold text-white mb-4">Profil Özeti</h3>
+                <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                    Java, Kotlin, Python, HTML, CSS, Firebase Firestore ve PostgreSQL ile projeler geliştiriyorum. Staj sürecimde switch değişimi, sunucu donanımı kurulumu desteği, bilgisayar format/kurulum işlemleri, işletim sistemi/yazılım kurulumu, teknik destek ve saha operasyonlarında görev aldım.
                 </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                    <div class="badge rounded-xl p-3 text-blue-200">Web & Mobil Geliştirme</div>
+                    <div class="badge rounded-xl p-3 text-blue-200">Bilgi İşlem Deneyimi</div>
+                    <div class="badge rounded-xl p-3 text-blue-200">Sistem / Ağ Operasyonları</div>
+                    <div class="badge rounded-xl p-3 text-blue-200">Firebase & PDF Akışları</div>
+                </div>
             </div>
         </div>
     </section>
@@ -78,103 +137,214 @@
     <section id="yetenekler" class="py-24 bg-slate-900/20 text-center border-y border-slate-900">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-white mb-12">Teknik Yetenekler</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="card-hover p-6 rounded-2xl bg-slate-900/50">
-                    <div class="text-blue-400 font-bold mb-3">Mobil</div>
+                    <div class="text-blue-400 font-bold mb-3">Sistem & Teknik</div>
                     <ul class="text-xs space-y-2 text-slate-400">
-                        <li>Android Studio</li>
-                        <li>Java & Kotlin</li>
-                        <li>Firebase</li>
+                        <li>Switch değişimi</li>
+                        <li>Sunucu kurulumu desteği</li>
+                        <li>Format / kurulum işlemleri</li>
+                        <li>Saha teknik destek</li>
                     </ul>
                 </div>
+
                 <div class="card-hover p-6 rounded-2xl bg-slate-900/50">
                     <div class="text-indigo-400 font-bold mb-3">Web</div>
                     <ul class="text-xs space-y-2 text-slate-400">
                         <li>HTML5 & CSS</li>
                         <li>JavaScript</li>
                         <li>Tailwind CSS</li>
+                        <li>Panel / form yapıları</li>
                     </ul>
                 </div>
+
                 <div class="card-hover p-6 rounded-2xl bg-slate-900/50">
                     <div class="text-emerald-400 font-bold mb-3">Backend & Veri</div>
                     <ul class="text-xs space-y-2 text-slate-400">
-                        <li>Python & FastAPI</li>
+                        <li>Python</li>
+                        <li>FastAPI</li>
                         <li>PostgreSQL</li>
-                        <li>C#</li>
+                        <li>Firebase Firestore</li>
                     </ul>
                 </div>
+
                 <div class="card-hover p-6 rounded-2xl bg-slate-900/50">
-                    <div class="text-orange-400 font-bold mb-3">Araçlar & Diğer</div>
+                    <div class="text-orange-400 font-bold mb-3">Mobil & Diğer</div>
                     <ul class="text-xs space-y-2 text-slate-400">
+                        <li>Android Studio</li>
+                        <li>Java & Kotlin</li>
                         <li>Git & GitHub</li>
                         <li>Arduino Projeleri</li>
-                        <li>Gemini AI Entegrasyonu</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="bitirme" class="py-24 bg-blue-600/5">
+    <section id="projeler" class="py-24">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-white mb-4">Akıllı Belediyecilik Platformu</h2>
-                <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+            <div class="text-center mb-14">
+                <div class="inline-block px-4 py-1.5 mb-5 text-xs font-semibold tracking-wider text-emerald-300 uppercase bg-emerald-400/10 rounded-full border border-emerald-400/20">
+                    Öne Çıkan Proje
+                </div>
+                <h2 class="text-4xl font-bold text-white mb-4">Staj Günlüğü Takip Sistemi</h2>
                 <p class="text-slate-400 max-w-4xl mx-auto leading-relaxed text-lg">
-                    Gemini AI destekli bu platform, vatandaşların yerel yönetimlere ilettiği şikayetleri Doğal Dil İşleme (NLP) teknikleriyle analiz ederek saniyeler içinde doğru birimlere yönlendirir. FastAPI ve PostgreSQL mimarisi üzerine kurulu sistem; şikayetleri otomatik kategorize etme, akıllı çözüm önerileri sunma ve belediye yetkililerine veri odaklı analiz imkanı sağlar.
+                    Staj defteri sürecini dijitalleştirmek, hoca/danışman - öğrenci etkileşimini güçlendirmek ve staj sonunda raporlanabilir çıktı üretmek amacıyla geliştirilen web tabanlı sistem.
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16 max-w-3xl mx-auto text-center">
-                <div class="p-4 rounded-xl bg-slate-900 border border-blue-500/20">
-                    <span class="text-blue-400 font-mono text-sm font-bold">Gemini AI (NLP)</span>
+            <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+                <div class="lg:col-span-2 bg-slate-900/50 border border-slate-800 rounded-3xl p-8">
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">Python</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">HTML</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">Firebase Firestore</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">Web ana ürün</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-orange-500/10 text-orange-300 border border-orange-500/20">Mobil geliştirme sürüyor</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white mb-4">Proje Özellikleri</h3>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-400">
+                        <div class="p-4 rounded-2xl bg-slate-950/50 border border-slate-800">
+                            <div class="text-white font-semibold mb-2">Günlük Atama ve Takip</div>
+                            Sınıfa günlük atanabilir, öğrencilerin günlük süreci danışman/hoca tarafından takip edilebilir.
+                        </div>
+                        <div class="p-4 rounded-2xl bg-slate-950/50 border border-slate-800">
+                            <div class="text-white font-semibold mb-2">Hoca - Öğrenci Etkileşimi</div>
+                            Öğretim elemanı günlükleri görebilir, değerlendirme yapabilir ve not düşebilir.
+                        </div>
+                        <div class="p-4 rounded-2xl bg-slate-950/50 border border-slate-800">
+                            <div class="text-white font-semibold mb-2">Takvim, Sohbet ve Toplantı</div>
+                            Canlı sohbet, toplantı linki ekleme, toplantı planlama ve bildirim akışları bulunur.
+                        </div>
+                        <div class="p-4 rounded-2xl bg-slate-950/50 border border-slate-800">
+                            <div class="text-white font-semibold mb-2">PDF Raporlama</div>
+                            Metinler, görseller ve konumsal/puanlı devam verileri PDF olarak alınabilir.
+                        </div>
+                    </div>
+
+                    <p class="mt-6 text-sm text-slate-500 leading-relaxed">
+                        Web tarafı ana ürün olarak büyük ölçüde tamamlandı. Mobil uygulama tarafının geliştirme süreci devam etmektedir.
+                        PDF çıktısı tek öğrenci için veya tüm sınıfı kapsayacak şekilde toplu indirilebilir.
+                    </p>
                 </div>
-                <div class="p-4 rounded-xl bg-slate-900 border border-blue-500/20">
-                    <span class="text-blue-400 font-mono text-sm font-bold">FastAPI</span>
+
+                <div class="bg-emerald-500/5 border border-emerald-500/20 rounded-3xl p-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Demo ve Kullanım Talebi</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                            Proje canlı demo olarak yayınlanmaktadır. Demo kullanıcısı, proje inceleme talebi veya kullanım hakkında bilgi almak için WhatsApp üzerinden iletişime geçebilirsiniz.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <a href="https://gunluk-fdff6.web.app/" target="_blank" class="block text-center bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold transition">
+                            Canlı Projeyi Aç
+                        </a>
+                        <a href="https://wa.me/905359691150?text=Merhaba%2C%20Staj%20G%C3%BCnl%C3%BC%C4%9F%C3%BC%20Takip%20Sistemi%20i%C3%A7in%20demo%20kullan%C4%B1c%C4%B1s%C4%B1%20veya%20kullan%C4%B1m%20talebi%20hakk%C4%B1nda%20ileti%C5%9Fime%20ge%C3%A7mek%20istiyorum." target="_blank" class="block text-center bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-xl font-semibold transition">
+                            WhatsApp ile Demo Talep Et
+                        </a>
+                    </div>
                 </div>
-                <div class="p-4 rounded-xl bg-slate-900 border border-blue-500/20 md:col-span-1 col-span-2">
-                    <span class="text-blue-400 font-mono text-sm font-bold">PostgreSQL</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="bitirme" class="py-20 bg-blue-600/5 border-y border-slate-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <div class="inline-block px-4 py-1.5 mb-5 text-xs font-semibold tracking-wider text-slate-300 uppercase bg-slate-800/70 rounded-full border border-slate-700">
+                    Bitirme Projesi
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Akıllı Belediyecilik Platformu</h2>
+                <div class="w-20 h-1 bg-slate-600 mx-auto mb-6"></div>
+                <p class="text-slate-400 max-w-4xl mx-auto leading-relaxed">
+                    Gemini AI destekli bu platform, vatandaşların yerel yönetimlere ilettiği şikayetleri Doğal Dil İşleme (NLP) teknikleriyle analiz ederek ilgili birimlere yönlendirmeyi hedefler. FastAPI ve PostgreSQL mimarisi üzerine kurulu sistem; şikayetleri kategorize etme, çözüm önerileri sunma ve belediye yetkililerine veri odaklı analiz imkanı sağlar.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12 max-w-3xl mx-auto text-center">
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-700">
+                    <span class="text-slate-300 font-mono text-sm font-bold">Gemini AI (NLP)</span>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-700">
+                    <span class="text-slate-300 font-mono text-sm font-bold">FastAPI</span>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-700 md:col-span-1 col-span-2">
+                    <span class="text-slate-300 font-mono text-sm font-bold">PostgreSQL</span>
                 </div>
             </div>
 
-            <div class="space-y-8">
-                <h3 class="text-2xl font-bold text-white flex items-center mb-8">
-                    <span class="mr-4">📸</span> Proje Arayüzleri
-                </h3>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="ss-card">
-                        <img src="geneladmin.png" alt="Süper Admin Paneli" class="w-full h-auto">
-                        <div class="p-4 bg-slate-950/80 text-center font-medium">Süper Admin Takip Paneli</div>
-                    </div>
-                    <div class="ss-card">
-                        <img src="istanbulsikayet.png" alt="Vatandaş Listesi" class="w-full h-auto">
-                        <div class="p-4 bg-slate-950/80 text-center font-medium">Vatandaş Şikayet Takip Listesi</div>
-                    </div>
-                </div>
+            <details class="max-w-5xl mx-auto bg-slate-900/50 border border-slate-800 rounded-3xl p-6">
+                <summary class="cursor-pointer text-white font-semibold text-center">Bitirme projesi arayüzlerini göster</summary>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="ss-card">
-                        <img src="sikayet.png" alt="Şikayet Formu" class="w-full h-auto">
-                        <div class="p-3 text-center text-xs text-slate-500">Şikayet Giriş Ekranı</div>
+                <div class="space-y-8 mt-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="ss-card">
+                            <img src="geneladmin.png" alt="Süper Admin Paneli" class="w-full h-auto">
+                            <div class="p-4 bg-slate-950/80 text-center font-medium">Süper Admin Takip Paneli</div>
+                        </div>
+                        <div class="ss-card">
+                            <img src="istanbulsikayet.png" alt="Vatandaş Listesi" class="w-full h-auto">
+                            <div class="p-4 bg-slate-950/80 text-center font-medium">Vatandaş Şikayet Takip Listesi</div>
+                        </div>
                     </div>
-                    <div class="ss-card">
-                        <img src="istanbulsikayett.png" alt="AI Yanıt" class="w-full h-auto">
-                        <div class="p-3 text-center text-xs text-slate-500">Gemini AI Analizi</div>
-                    </div>
-                    <div class="ss-card">
-                        <img src="istanbuladmin.png" alt="İl Admin" class="w-full h-auto">
-                        <div class="p-3 text-center text-xs text-slate-500">Belediye Yetkili Paneli</div>
-                    </div>
-                </div>
 
-                <div class="ss-card max-w-5xl mx-auto mt-12 border-blue-500/40 shadow-2xl shadow-blue-900/20">
-                    <img src="harita.png" alt="Şikayet Haritası" class="w-full h-auto">
-                    <div class="p-6 bg-slate-950/90 text-center">
-                        <h4 class="text-blue-400 font-bold text-xl mb-1 text-center">Türkiye Geneli Şikayet Analiz Haritası</h4>
-                        <p class="text-xs text-slate-500 text-center">İl bazlı yoğunluk takibi ve veri görselleştirme modülü.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="ss-card">
+                            <img src="sikayet.png" alt="Şikayet Formu" class="w-full h-auto">
+                            <div class="p-3 text-center text-xs text-slate-500">Şikayet Giriş Ekranı</div>
+                        </div>
+                        <div class="ss-card">
+                            <img src="istanbulsikayett.png" alt="AI Yanıt" class="w-full h-auto">
+                            <div class="p-3 text-center text-xs text-slate-500">Gemini AI Analizi</div>
+                        </div>
+                        <div class="ss-card">
+                            <img src="istanbuladmin.png" alt="İl Admin" class="w-full h-auto">
+                            <div class="p-3 text-center text-xs text-slate-500">Belediye Yetkili Paneli</div>
+                        </div>
+                    </div>
+
+                    <div class="ss-card max-w-5xl mx-auto border-blue-500/30 shadow-2xl shadow-blue-900/10">
+                        <img src="harita.png" alt="Şikayet Haritası" class="w-full h-auto">
+                        <div class="p-6 bg-slate-950/90 text-center">
+                            <h4 class="text-blue-400 font-bold text-xl mb-1">Türkiye Geneli Şikayet Analiz Haritası</h4>
+                            <p class="text-xs text-slate-500">İl bazlı yoğunluk takibi ve veri görselleştirme modülü.</p>
+                        </div>
                     </div>
                 </div>
+            </details>
+        </div>
+    </section>
+
+    <section id="cv" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">CV Dokümanları</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">
+                    Talebe göre fotoğraflı veya fotoğrafsız CV indirilebilir. Fotoğrafsız CV genel başvurular için, fotoğraflı CV ise fotoğraf talep edilen başvurular için uygundur.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <a href="Muhammet_Enes_Gencer_cv.pdf" target="_blank" class="card-hover block p-8 rounded-3xl bg-blue-500/5 border border-blue-500/10">
+                    <div class="text-3xl mb-4">📄</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Fotoğrafsız CV</h3>
+                    <p class="text-sm text-slate-400">Genel başvurular ve ATS sistemleri için önerilen güncel CV.</p>
+                </a>
+
+                <a href="Muhammet_Enes_Gencer_cvfoto.pdf" target="_blank" class="card-hover block p-8 rounded-3xl bg-indigo-500/5 border border-indigo-500/10">
+                    <div class="text-3xl mb-4">👤</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Fotoğraflı CV</h3>
+                    <p class="text-sm text-slate-400">Fotoğraf talep edilen başvurular için hazırlanmış CV.</p>
+                </a>
+
+                <a href="cv.pdf" target="_blank" class="card-hover block p-8 rounded-3xl bg-slate-900/50 border border-slate-800">
+                    <div class="text-3xl mb-4">🗂️</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Eski CV</h3>
+                    <p class="text-sm text-slate-400">Önceki CV dosyası arşiv olarak sitede kalır.</p>
+                </a>
             </div>
         </div>
     </section>
@@ -182,30 +352,37 @@
     <footer id="iletisim" class="py-24 border-t border-slate-900">
         <div class="max-w-6xl mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold text-white mb-10">İletişime Geçin</h2>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                
-                <div class="p-8 rounded-3xl bg-blue-500/5 border border-blue-500/10 flex flex-col items-center justify-center min-h-[160px]">
+                <div class="p-8 rounded-3xl bg-blue-500/5 border border-blue-500/10 flex flex-col items-center justify-center min-h-[170px]">
                     <div class="text-xs uppercase tracking-widest mb-3 opacity-60 font-bold text-blue-400">E-Posta</div>
                     <a href="mailto:enesgencer0@gmail.com" class="text-sm sm:text-base lg:text-lg font-semibold break-all text-white hover:text-blue-400 transition-colors px-2">
                         enesgencer0@gmail.com
                     </a>
                 </div>
 
-                <div class="p-8 rounded-3xl bg-indigo-500/5 border border-indigo-500/10 flex flex-col items-center justify-center min-h-[160px]">
-                    <div class="text-xs uppercase tracking-widest mb-3 opacity-60 font-bold text-indigo-400">Telefon</div>
-                    <a href="tel:+905359691150" class="text-lg sm:text-xl font-bold text-white hover:text-indigo-400 transition-colors">+90 535 969 11 50</a>
-                </div>
-
-                <div class="p-8 rounded-3xl bg-emerald-500/5 border border-emerald-500/10 flex flex-col items-center justify-center min-h-[160px]">
-                    <div class="text-xs uppercase tracking-widest mb-3 opacity-60 font-bold text-emerald-400">Dokümanlar</div>
-                    <a href="cv.pdf" target="_blank" class="text-lg sm:text-xl font-bold text-white hover:text-emerald-400 transition-colors flex items-center space-x-2">
-                        <span>Özgeçmiş (PDF)</span> <span>📄</span>
+                <div class="p-8 rounded-3xl bg-emerald-500/5 border border-emerald-500/10 flex flex-col items-center justify-center min-h-[170px]">
+                    <div class="text-xs uppercase tracking-widest mb-3 opacity-60 font-bold text-emerald-400">WhatsApp</div>
+                    <a href="https://wa.me/905359691150?text=Merhaba%2C%20portfolyo%20siteniz%20%C3%BCzerinden%20ileti%C5%9Fime%20ge%C3%A7iyorum."
+                       target="_blank"
+                       class="text-lg sm:text-xl font-bold text-white hover:text-emerald-400 transition-colors">
+                        +90 535 969 11 50
                     </a>
+                    <a href="tel:+905359691150" class="mt-3 text-xs text-slate-500 hover:text-slate-300 transition">Arama yapmak için tıklayın</a>
                 </div>
 
+                <div class="p-8 rounded-3xl bg-indigo-500/5 border border-indigo-500/10 flex flex-col items-center justify-center min-h-[170px]">
+                    <div class="text-xs uppercase tracking-widest mb-3 opacity-60 font-bold text-indigo-400">Bağlantılar</div>
+                    <div class="flex flex-col gap-2 text-sm font-semibold">
+                        <a href="https://github.com/menesgencerdev" target="_blank" class="text-white hover:text-indigo-400 transition">GitHub</a>
+                        <a href="https://www.linkedin.com/in/menesgencer" target="_blank" class="text-white hover:text-indigo-400 transition">LinkedIn</a>
+                        <a href="https://gunluk-fdff6.web.app/" target="_blank" class="text-white hover:text-indigo-400 transition">Canlı Proje</a>
+                    </div>
+                </div>
             </div>
-            <p class="mt-20 text-sm text-slate-600 italic">
-                &copy; 2025 Muhammet Enes GENÇER | İnönü Üniversitesi Bilgisayar Mühendisliği
+
+            <p class="mt-16 text-sm text-slate-600 italic">
+                &copy; 2026 Muhammet Enes GENÇER | İnönü Üniversitesi Bilgisayar Mühendisliği
             </p>
         </div>
     </footer>
